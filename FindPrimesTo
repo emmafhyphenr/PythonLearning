@@ -1,0 +1,15 @@
+def findPrimesTo(p):
+    count = 1
+    primes = [2]
+    if p == 1:
+        print(primes[0])
+    if p > 1:
+        for q in range(3,p):
+            for r in primes:
+                if (q%r) == 0:
+                    break
+                else :
+                    primes.append(q)
+                    primes = np.unique(primes).tolist()
+    print(primes)
+   
